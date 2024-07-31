@@ -1,0 +1,48 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: orangered;
+}
+body {
+    background-image: url('fondo.jpg');
+}
+
+.content {
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    width: 1000px;
+    height: 500px;
+    margin: 100px;
+    border: 12px;
+    border-radius: 20px;
+}
+
+body h2 {
+    color: crimson;
+    font-size: 70px;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+.datos1 {
+    padding: 30px;
+    font-size: 25px;
+}
+
+.datos2 {
+    padding: 30px;
+    font-size: 25px;
+}
+
+.datos3 {
+    padding: 30px;
+    font-size: 25px;
+}
+
+button {
+    margin: 30px;
+}

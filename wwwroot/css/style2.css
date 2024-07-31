@@ -1,0 +1,70 @@
+﻿* {
+    margin: auto;
+    padding: 0;
+}
+body{
+
+}
+.content {
+    background-image: url("https://grupogeard.com/ec/wp-content/uploads/sites/5/2023/03/pexels-sora-shimazaki-5673488.jpg"), url("https://www.fresenius-kabi.com/mx/images/Porque_nosotros.jpg");
+    background-position: left, right;
+    background-repeat: no-repeat;
+    background-size: 50% 100%, 50% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    height: 60vh;
+}
+
+.content .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 25px;
+    width: 500px;
+    height: 150px;
+    background-color: #0D6EFD;
+    color: white;
+    border-radius:10px;
+    opacity: 1;
+    transition: background-color 0.3s;
+}
+
+.content .container:hover {
+    background-color: #0D4EFD;
+}
+.content .container a {
+    text-decoration: none;
+}
+
+.content .container h1 {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 40px;
+    color: white;
+}
+
+/*.content .container .empleador {
+    background-color: #7D5757;
+    font-size: 20px;
+    padding: 10px;
+    margin: 25px;
+    width: 300px;
+    height: 300px;
+}
+
+.content .container .empleador h1 {
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+    */
+
+.nombre {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
