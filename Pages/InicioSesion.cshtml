@@ -1,0 +1,83 @@
+﻿@page
+@model Agencia_Bogota.Pages.InicioSesionModel
+@using Microsoft.AspNetCore.Mvc.ViewFeatures
+
+@{
+    ViewData["Title"] = "Inicio de Sesión";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <title>Inicio De Sesion</title>
+</head>
+
+<body>
+    <section class="vh-90" style="margin-top: 100px">
+        <div class="container-fluid h-custom">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                    <img src="https://img.freepik.com/vector-premium/seminario-web-educativo-audiencia-digital-clase-linea-concepto-educacion-moderna_148553-185.jpg?w=740"
+                         class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                    <form method="post" enctype="multipart/form-data">
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="form3Example3"  class="form-control form-control-lg"
+                                   placeholder="Digite una dirección de correo valida" name="Email" />
+                            <label class="form-label" for="form3Example3">Dirección de Correo</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-3">
+                            <input type="password" id="form3Example4" class="form-control form-control-lg"
+                                   placeholder="Digite su contraseña" name="Password" />
+                            <label class="form-label" for="form3Example4">Contraseña</label>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <!-- Checkbox -->
+                            <div class="form-check mb-0">
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                                <label class="form-check-label" for="form2Example3">
+                                    Remember me
+                                </label>
+                            </div>
+                            <a href="#" class="text-body">¿Olvido su contraseña?</a>
+                        </div>
+
+                        <div class="text-center text-lg-start mt-4 pt-2">
+                            <button type="submit" class="btn btn-primary btn-lg"
+                                    style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                                Iniciar sesion
+                            </button>
+                            <p class="small fw-bold mt-2 pt-1 mb-0">
+                                ¿No tienes cuenta? Cree una ahora <a href="RegistroPersona"
+                                                          class="link-danger">Registrarse</a>
+                            </p>
+                            <div class="text-danger">
+                                @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                                {
+                                    <div class="alert alert-danger">
+                                        <p>
+                                            @Model.ErrorMessage
+                                        </p>
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

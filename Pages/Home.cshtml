@@ -1,0 +1,43 @@
+﻿@page
+@model Agencia_Bogota.Pages.HomeModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@if (Model.IsLoggedIn)
+{
+    <p>Bienvenido, usuario con ID @Model.LoggedInUserId y rol @Model.LoggedInUserRole</p>
+    <form method="post">
+        <button type="submit">Cerrar Sesión </button>
+    </form>
+    
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="content">
+            <div class="container">
+                <div class="empleador">
+                    <h1>HOME BIENVENIDO</h1>
+                    @*<a href="DownloadPdf">Descargar PDF</a>*@
+                   <a href="data:application/pdf;base64,@Convert.ToBase64String(Model.PdfFile)" download="@Model.PdfFileName">Descargar PDF</a>
+                </div>
+            </div>
+        </div>
+        <h1 class="nombre">Agencia de Empleo Bogota</h1>
+    </body>
+
+    </html>
+}
+else
+{
+    <p>No has iniciado sesión. Por favor, inicia sesión para acceder al contenido.</p>
+    <p><a href="/InicioSesion">Iniciar sesión</a></p>
+}
+ 
